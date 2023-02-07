@@ -1,0 +1,57 @@
+.contact {
+    &__header {
+        h1 {
+            color:$color-2;
+        }
+    }
+
+    &__form {
+        display: grid;
+        margin:  4rem 16rem;
+
+        &-group {
+            margin:0.5rem 0;
+        }
+
+
+        &_label {
+            color:$color-5;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        
+    
+        &_input {
+            width: 100%;
+            font-size: 1.3rem;
+            border: 1px solid $color-2;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            
+            &:hover {
+                transform: scale(102%);
+            }
+            
+        }
+
+        &_submit {
+            background-color: $color-2;
+            color: $color-1;
+            font-size: 1.3rem;
+            font-weight: bold;
+            border: 1px solid $color-2;
+            border-radius: 0.5rem;
+            padding: 0.5rem;
+            cursor: pointer;
+
+            &:hover {
+                transform: scale(102%);
+            }
+        }
+
+
+
+
+    }
+}

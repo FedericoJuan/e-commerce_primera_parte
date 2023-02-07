@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Ecommerce</title>
+    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="/index.html" class="navbar__nav-link">
+            <img class="navbar__logo" src="/assets/images/logo.png" alt="Logo del ecommerce" width="50" height="50">
+        </a>
+        <ul class="navbar__nav-links-container">
+            <li class="navbar__nav-item">
+                <a href="/index.html" class="navbar__nav-link">Inicio</a>
+            </li>
+            <li class="navbar__nav-item">
+                <a href="/pages/contact/contact.html" class="navbar__nav-link">Contacto</a>
+            </li>
+            <li class="navbar__nav-item">
+                <a href="/pages/about-us/about-us.html" class="navbar__nav-link">Nosotros</a>
+            </li>
+        </ul>
+        <nav class="navbar__user-menu">
+            <a class="navbar__user-menu-cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a class="navbar__user-container" href="#">
+                <figure class="navbar__user-container.icon">
+                    <i class="fa-solid fa-user"></i>
+                    <!-- TODO: avatar de la persona logueada o nombre -->
+                </figure>
+                <p>Federico</p>
+            </a>
+        </nav>
+    </nav>
+    <header class="contact__header">
+        <h1>Tienes dudas Contactanos!</h1>
+    </header>
+    <main >
+
+        <form class="contact__form" action="#" method="get">
+            <div class="contact__form-group">
+                <label class="contact__form_label">Nombre</label>
+                <input class="contact__form_input" type="text" name="nombre" placeholder="Federico " >
+            </div>
+
+            <div class="contact__form-group">
+                <label class="contact__form_label">Email</label>
+                <input class="contact__form_input" type="email" name="email" placeholder="nombre@email.dom">
+
+            </div>
+
+            <div class="contact__form-group">
+                <textarea class="contact__form_input" name="mensaje" cols="30" rows="10" placeholder="Tu importante mensaje"></textarea>
+            </div>
+
+            <input class="contact__form_submit" type="submit" value="Enviar">
+        </form>
+    </main>
+    <footer class="footer">
+        <section class="footer__institucional">
+            <header class="footer__institucional-header">
+                <div class="footer__institucional-header-title">
+                    <img src="/assets/images/logo.png" alt="Company Logo" class="footer__institucional-header-logo" height="50" width="50">
+                    <h4 class="footer__institucional-header-company-name">
+                        My-Market
+                    </h4>
+
+                </div>
+                <div class="footer__institucional-header-subtitle">
+                    <p class="footer__institucional-header-copyrigth">
+                        &copy;2023 -Todos los derechos reservados a Federico
+                    </p>
+                </div>
+            </header>
+            <nav class="footer__institucional-data">
+                <ul class="footer__institucional-data-container">
+                    <li class="footer__institucional-data-item">
+                        <a href="#" class="footer__institucional-data-link">
+                            <!-- Icono -->
+                            <i class="fa-solid fa-phone"></i> 11-22334455
+                        </a>
+                    </li>
+                    <li class="footer__institucional-data-item">
+                        <a href="#" class="footer__institucional-data-link">
+                            <!-- Icono -->
+                            <i class="fa-solid fa-phone"></i> Av. Calle Falsa 123
+                        </a>
+                    </li>
+                    <li class="footer__institucional-data-item">
+                        <a href="#" class="footer__institucional-data-link">
+                            <!-- Icono -->
+                            <i class="fa-solid fa-envelope"></i> Federico@gmail.com
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="footer__contact-us">
+            <ul class="footer__contact-container">
+                <li class="footer__contact-item">
+                    <a href="#" class="footer__contact-link">
+                        <!-- Icono -->
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="footer__contact-item">
+                    <a href="#" class="footer__contact-link">
+                        <!-- Icono -->
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="footer__contact-item">
+                    <a href="#" class="footer__contact-link">
+                        <!-- Icono -->
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </footer>
+
+</body>
+
+</html>

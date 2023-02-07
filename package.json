@@ -1,0 +1,17 @@
+{
+  "name": "e-commerce_primera_parte",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node-sass scss/main.scss -o css/",
+    "watch": "node-sass scss/main.scss -w -o css/", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "federico",
+  "license": "ISC",
+  "dependencies": {
+  "node-sass": "^8.0.0"
+  }
+}
