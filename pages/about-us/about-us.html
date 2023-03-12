@@ -14,43 +14,67 @@
 </head>
 <body>
     <nav class="navbar">
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="navbar__label-toggle"
+          ><i class="fa-solid fa-bars"></i
+        ></label>
         <a href="/index.html" class="navbar__nav-link">
-            <img class="navbar__logo" src="/assets/images/logo.png" alt="Logo del ecommerce" width="50" height="50">
+          <img
+            class="navbar__logo"
+            src="/assets/images/logo.png"
+            alt="Logo del ecommerce"
+            width="50"
+            height="50"
+          />
         </a>
         <ul class="navbar__nav-links-container">
-            <li class="navbar__nav-item">
-                <a href="/index.html" class="navbar__nav-link">Inicio</a>
-            </li>
-            <li class="navbar__nav-item">
-                <a href="/pages/contact/contact.html" class="navbar__nav-link">Contacto</a>
-            </li>
-            <li class="navbar__nav-item">
-                <a href="/pages/about-us/about-us.html" class="navbar__nav-link">Nosotros</a>
-            </li>
+          <li class="navbar__nav-item">
+            <a href="/index.html" class="navbar__nav-link">Inicio</a>
+          </li>
+          <li class="navbar__nav-item">
+            <a href="/pages/contact/contact.html" class="navbar__nav-link"
+              >Contacto</a
+            >
+          </li>
+          <li class="navbar__nav-item">
+            <a href="/pages/about-us/about-us.html" class="navbar__nav-link"
+              >Nosotros</a
+            >
+          </li>
+          <li class="navbar__nav-item">
+            <a href="/pages/register/register.html" class="navbar__nav-link"
+              >Registrarse</a
+            >
+          </li>
         </ul>
         <nav class="navbar__user-menu">
-            <a class="navbar__user-menu-cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a class="navbar__user-container" href="#">
-                <figure class="navbar__user-container.icon">
-                    <i class="fa-solid fa-user"></i>
-                    <!-- TODO: avatar de la persona logueada o nombre -->
-                </figure>
-                <p>Federico</p>
-            </a>
+          <a class="navbar__user-menu-cart" href="#"
+            ><i class="fa-solid fa-cart-shopping"></i
+          ></a>
+          <a class="navbar__user-container" href="#">
+            <figure class="navbar__user-container.icon">
+              <i class="fa-solid fa-user"></i>
+              <!-- TODO: avatar de la persona logueada o nombre -->
+            </figure>
+            <p>Federico</p>
+          </a>
         </nav>
-    </nav>
+      </nav>
     <main class="about-us">
 
         <header class="about-us__header">
-            <h1 class="about-us__header__title">
-                Acerca de nosotros
-            </h1>
-            <p>
-                Soy Federico un desarrollador Freelancer en busca de poder avanzar en el mundo del desarrollo web.
-                Mi mayor aspiracion es poder trabajar en una multinacional o en mercado libre.
-            </p>
+            <img class="about-us__header__image" src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt="grupo de desarrolladore trabajando">
+            <div>
+              <h1 class="about-us__header__title">
+                  Acerca de nosotros
+              </h1>
+              <p>
+                  Soy Federico un desarrollador Freelancer en busca de poder avanzar en el mundo del desarrollo web.
+                  Mi mayor aspiracion es poder trabajar en una multinacional o en mercado libre.
+              </p>
+            </div>
         </header>
-    
+        <hr class="about-us__separator">
         <section class="about-us__container">
         <h2 class="about-us__container__title">
             Acerca de este proyecto
@@ -77,66 +101,63 @@
     </main>
 
     <footer class="footer">
-        <section class="footer__institucional">
-            <header class="footer__institucional-header">
-                <div class="footer__institucional-header-title">
-                    <img src="/assets/images/logo.png" alt="Company Logo" class="footer__institucional-header-logo" height="50" width="50">
-                    <h4 class="footer__institucional-header-company-name">
-                        My-Market
-                    </h4>
-
-                </div>
-                <div class="footer__institucional-header-subtitle">
-                    <p class="footer__institucional-header-copyrigth">
-                        &copy;2023 -Todos los derechos reservados a Federico
-                    </p>
-                </div>
-            </header>
-            <nav class="footer__institucional-data">
-                <ul class="footer__institucional-data-container">
-                    <li class="footer__institucional-data-item">
-                        <a href="#" class="footer__institucional-data-link">
-                            <!-- Icono -->
-                            <i class="fa-solid fa-phone"></i> 11-22334455
-                        </a>
-                    </li>
-                    <li class="footer__institucional-data-item">
-                        <a href="#" class="footer__institucional-data-link">
-                            <!-- Icono -->
-                            <i class="fa-solid fa-phone"></i> Av. Calle Falsa 123
-                        </a>
-                    </li>
-                    <li class="footer__institucional-data-item">
-                        <a href="#" class="footer__institucional-data-link">
-                            <!-- Icono -->
-                            <i class="fa-solid fa-envelope"></i> Federico@gmail.com
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </section>
-        <section class="footer__contact-us">
-            <ul class="footer__contact-container">
-                <li class="footer__contact-item">
-                    <a href="#" class="footer__contact-link">
-                        <!-- Icono -->
-                        <i class="fa-brands fa-facebook-f"></i>
-                    </a>
-                </li>
-                <li class="footer__contact-item">
-                    <a href="#" class="footer__contact-link">
-                        <!-- Icono -->
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                </li>
-                <li class="footer__contact-item">
-                    <a href="#" class="footer__contact-link">
-                        <!-- Icono -->
-                        <i class="fa-brands fa-linkedin-in"></i>
-                    </a>
-                </li>
-            </ul>
-        </section>
-    </footer>
+        <header class="footer__institucional-header">
+          <img
+            src="/assets/images/logo.png"
+            alt="Company Logo"
+            class="footer__institucional-header-logo"
+            height="50"
+            width="50"
+          />
+          <h4 class="footer__institucional-header-company-name">My-Market</h4>
+        </header>
+        <nav class="footer__institucional-data">
+          <ul class="footer__institucional-data-container">
+            <li class="footer__institucional-data-item">
+              <a href="#" class="footer__institucional-data-link">
+                <!-- Icono -->
+                <i class="fa-solid fa-phone"></i> 11-22334455
+              </a>
+            </li>
+            <li class="footer__institucional-data-item">
+              <a href="#" class="footer__institucional-data-link">
+                <!-- Icono -->
+                <i class="fa-solid fa-phone"></i> Av. Calle Falsa 123
+              </a>
+            </li>
+            <li class="footer__institucional-data-item">
+              <a href="#" class="footer__institucional-data-link">
+                <!-- Icono -->
+                <i class="fa-solid fa-envelope"></i> Federico@gmail.com
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <nav class="footer__contact-us">
+          <ul class="footer__contact-container">
+            <li class="footer__contact-item">
+              <a href="#" class="footer__contact-link">
+                <!-- Icono -->
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </li>
+            <li class="footer__contact-item">
+              <a href="#" class="footer__contact-link">
+                <!-- Icono -->
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </li>
+            <li class="footer__contact-item">
+              <a href="#" class="footer__contact-link">
+                <!-- Icono -->
+                <i class="fa-brands fa-linkedin-in"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__institucional-copyrigth">
+          <p>&copy;2023 -Todos los derechos reservados a Federico</p>
+        </div>
+      </footer>
 </body>
 </html>

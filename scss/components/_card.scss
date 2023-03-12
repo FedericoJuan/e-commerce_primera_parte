@@ -1,14 +1,14 @@
 .section-cards {
     display: grid;
     gap: 8px;
-    grid-template-columns: auto auto auto auto;
-    margin:2rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin:0;
     padding:0.5rem;
     
 }
 
 .card {
-    margin:4px;
+    margin:auto;
     padding: 8px;
     border: none;
     border-radius: 5px;
@@ -70,5 +70,13 @@
             margin-top: 1rem;
           
         }
+    }
+}
+
+
+@media (max-width: 768px) {
+    .section-cards {
+        gap: 8px;
+        grid-template-columns: 1fr ;   
     }
 }

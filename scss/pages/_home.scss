@@ -1,12 +1,4 @@
-.navbar {
-    .navbar__user-menu {
-        .navbar__user-menu-cart i {
-            color: $color-bg-secondary;    
-        }
-    }
 
-
-}
 header {
     margin: 1rem 3rem ;
     display:flex;
@@ -25,6 +17,8 @@ header {
     .product-search {
         
         label {
+            color:$color-3;
+            display: block;
             font-size: 1.5rem;
         }
         input[type=text]{
@@ -46,4 +40,22 @@ header {
         }
     }
 
+    
+    
+}
+
+@media (max-width: 768px) {
+    header {
+        h1 {text-align: center;}
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .product-search {
+            label {
+                display: none;
+                background-color: aliceblue;
+            }
+        }
+    }
 }

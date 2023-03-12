@@ -1,7 +1,7 @@
 .fab {
     position: fixed;
     z-index: 700;
-    bottom: 7rem;
+    bottom: 2rem;
     right: 3rem;
     display: flex;
     align-items: center;
@@ -11,8 +11,8 @@
     background-color: rgb(155, 211, 71);
     border-radius: 100%;
     border:1px solid $color-5;
-    height: 5rem;
-    width: 5rem;
+    height: 4rem;
+    width: 4rem;
 
     &__link:hover {
         transform: scale(110%);
@@ -20,8 +20,6 @@
 
     &__text {
         color: white;
-        font-size: 3rem;
+        font-size: 2rem;
     }
-    
-
 }
