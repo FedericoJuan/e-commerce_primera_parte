@@ -13,53 +13,49 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <nav class="navbar">
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="navbar__label-toggle"
-          ><i class="fa-solid fa-bars"></i
-        ></label>
-        <a href="/index.html" class="navbar__nav-link">
-          <img
-            class="navbar__logo"
-            src="/assets/images/logo.png"
-            alt="Logo del ecommerce"
-            width="50"
-            height="50"
-          />
-        </a>
-        <ul class="navbar__nav-links-container">
-          <li class="navbar__nav-item">
+  <nav class="navbar">
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="navbar__label-toggle"><i class="fa-solid fa-bars"></i></label>
+    <a href="/index.html" class="navbar__nav-link">
+        <img class="navbar__logo" src="/assets/images/logo.png" alt="Logo del ecommerce" width="50" height="50">
+    </a>
+    <ul class="navbar__nav-links-container">
+        <li class="navbar__nav-item">
             <a href="/index.html" class="navbar__nav-link">Inicio</a>
-          </li>
-          <li class="navbar__nav-item">
-            <a href="/pages/contact/contact.html" class="navbar__nav-link"
-              >Contacto</a
-            >
-          </li>
-          <li class="navbar__nav-item">
-            <a href="/pages/about-us/about-us.html" class="navbar__nav-link"
-              >Nosotros</a
-            >
-          </li>
-          <li class="navbar__nav-item">
-            <a href="/pages/register/register.html" class="navbar__nav-link"
-              >Registrarse</a
-            >
-          </li>
-        </ul>
-        <nav class="navbar__user-menu">
-          <a class="navbar__user-menu-cart" href="#"
-            ><i class="fa-solid fa-cart-shopping"></i
-          ></a>
-          <a class="navbar__user-container" href="#">
+        </li>
+        <li class="navbar__nav-item">
+            <a href="/pages/contact/contact.html" class="navbar__nav-link">Contacto</a>
+        </li>
+        <li class="navbar__nav-item">
+            <a href="/pages/about-us/about-us.html" class="navbar__nav-link">Nosotros</a>
+        </li>    
+    </ul>
+
+    <ul class="navbar__nav-links-container" id="rutas-admin">
+        <li class="navbar__nav-item">
+            <a href="/pages/admin/usuarios/usuarios.html" class="navbar__nav-link">Usuarios</a>
+        </li>
+        <li class="navbar__nav-item">
+            <a href="/pages/about-us/about-us.html" class="navbar__nav-link">Productos</a>
+        </li>
+    </ul>
+
+    <nav class="navbar__user-menu" id="contenedor-autenticacion-login">
+        <a href="/pages/login/login.html" class="nav__user-contaier">Login</a>
+        <a href="/pages/register/register.html" class="nav__user-contaier">Registro</a>
+    </nav>
+    <nav class="navbar__user-menu" id="contenedor-autenticacion-usuario">
+        <a class="navbar__user-menu-cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+        <a class="navbar__user-container" href="#">
             <figure class="navbar__user-container.icon">
-              <i class="fa-solid fa-user"></i>
-              <!-- TODO: avatar de la persona logueada o nombre -->
+                <i class="fa-solid fa-user"></i>
+                <!-- TODO: avatar de la persona logueada o nombre -->
             </figure>
-            <p>Federico</p>
-          </a>
-        </nav>
-      </nav>
+            <p id="nav-usuario"></p>
+        </a>
+        <button onclick="logout()">Logout</button>
+    </nav>
+</nav>
     <main class="about-us">
 
         <header class="about-us__header">
@@ -159,5 +155,7 @@
           <p>&copy;2023 -Todos los derechos reservados a Federico</p>
         </div>
       </footer>
+
+      <script src="js/navbar.js"></script>
 </body>
 </html>

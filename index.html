@@ -29,258 +29,46 @@
             </li>
             <li class="navbar__nav-item">
                 <a href="/pages/about-us/about-us.html" class="navbar__nav-link">Nosotros</a>
+            </li>    
+        </ul>
+
+        <ul class="navbar__nav-links-container" id="rutas-admin">
+            <li class="navbar__nav-item">
+                <a href="/pages/admin/usuarios/usuarios.html" class="navbar__nav-link">Usuarios</a>
             </li>
             <li class="navbar__nav-item">
-                <a href="/pages/register/register.html" class="navbar__nav-link">Registrarse</a>
+                <a href="/pages/admin/productos/productos.html" class="navbar__nav-link">Productos</a>
             </li>
         </ul>
-        <nav class="navbar__user-menu">
-            <a class="navbar__user-menu-cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+
+        <nav class="navbar__user-menu" id="contenedor-autenticacion-login">
+            <a href="/pages/login/login.html" class="nav__user-contaier">Login</a>
+            <a href="/pages/register/register.html" class="nav__user-contaier">Registro</a>
+        </nav>
+        <nav class="navbar__user-menu" id="contenedor-autenticacion-usuario">
+            <a class="navbar__user-menu-cart" href="/pages/ordenes/ordenes.html"><i class="fa-solid fa-cart-shopping"></i></a>
             <a class="navbar__user-container" href="#">
                 <figure class="navbar__user-container.icon">
                     <i class="fa-solid fa-user"></i>
                     <!-- TODO: avatar de la persona logueada o nombre -->
                 </figure>
-                <p>Federico</p>
+                <p id="nav-usuario"></p>
             </a>
+            <button class="navbar__user-menu-logout" onclick="logout()">Logout</button>
         </nav>
     </nav>
     <header>
         <h1 class="home-title">Nuestros Productos!</h1>
-        <form class="product-search">
-            <label for="" class="product-search__label">Encuentra lo que necesitas!</label>
-            <input type="text" class="product-search__input">
+        <form class="product-search" id="filtro-productos" onsubmit="filtrarProductos(event)">
+            <label for="consulta" class="product-search__label">Encuentra lo que necesitas!</label>
+            <input type="text" class="product-search__input" id="consulta">
             <input type="submit" class="product-search__btn" value="Buscar">
         </form>
     </header>
     <!-- TODO: Implementar carousel en 2do módulo -->
     <main>
-        <section class="section-cards">
-            <article class="card">
-                <header class="card__header">
-
-                    <h3 class="card__title">
-                        Remera blanca Mujer.
-                    </h3>
-                    <p class="card__subtitle">
-                        Regalate una alegria!
-                    </p>
-                </header>
-                <figure class="card__body">
-                    <img src="https://images.unsplash.com/photo-1554568218-0f1715e72254?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Product Image" class="card__img" height="200" width="200">
-                    <div class="card__price">
-                        <p><span>$</span> 2500</p>
-                    </div>
-                </figure>
-                <footer class="card__footer">
-                    <hr>
-                    <nav class="card__btn-container">
-                        <a class="btn btn-primary" href="#">
-                            Detalle
-                        </a>
-                        <a class="btn btn-secondary" href="#">Comprar!</a>
-                    </nav>
-                </footer>
-                </div>
-            </article>
-
-            <article class="card">
-                <header class="card__header">
-
-                    <h3 class="card__title">
-                        Remera Blanca Hombre.
-                    </h3>
-                    <p class="card__subtitle">
-                        Elegantemente deportivo!
-                    </p>
-                </header>
-                <figure class="card__body">
-                    <img src="https://images.unsplash.com/photo-1527719327859-c6ce80353573?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="Product Image" class="card__img" height="200" width="200">
-                    <div class="card__price">
-                        <p><span>$</span> 4000</p>
-                    </div>
-                </figure>
-                <footer class="card__footer">
-                    <hr>
-                    <nav class="card__btn-container">
-                        <a class="btn btn-primary" href="#">
-                            Detalle
-                        </a>
-                        <a class="btn btn-secondary" href="#">Comprar!</a>
-                    </nav>
-                </footer>
-                </div>
-            </article>
-
-             <article class="card">
-                <header class="card__header">
-
-                    <h3 class="card__title">
-                        Buzo Gris unisex.
-                    </h3>
-                    <p class="card__subtitle">
-                        Comodo y a la moda!
-                    </p>
-                </header>
-                <figure class="card__body">
-                    <img src="https://images.unsplash.com/photo-1576775068951-d4983d253497?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Product Image" class="card__img" height="200" width="200">
-                    <div class="card__price">
-                        <p><span>$</span> 1550</p>
-                    </div>
-                </figure>
-                <footer class="card__footer">
-                    <hr>
-                    <nav class="card__btn-container">
-                        <a class="btn btn-primary" href="#">
-                            Detalle
-                        </a>
-                        <a class="btn btn-secondary" href="#">Comprar!</a>
-                    </nav>
-                </footer>
-                </div>
-            </article>
-
-             <article class="card">
-                <header class="card__header">
-
-                    <h3 class="card__title">
-                        Buzo Dama de lana.
-                    </h3>
-                    <p class="card__subtitle">
-                        Un abrazo de la abuela!
-                    </p>
-                </header>
-                <figure class="card__body">
-                    <img src="https://images.unsplash.com/photo-1520965291898-92731ff2f8ad?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=432&q=80g" alt="Product Image" class="card__img" height="200" width="200">
-                    <div class="card__price">
-                        <p><span>$</span> 5000</p>
-                    </div>
-                </figure>
-                <footer class="card__footer">
-                    <hr>
-                    <nav class="card__btn-container">
-                        <a class="btn btn-primary" href="#">
-                            Detalle
-                        </a>
-                        <a class="btn btn-secondary" href="#">Comprar!</a>
-                    </nav>
-                </footer>
-                </div>
-            </article>
-
-             <article class="card">
-                <header class="card__header">
-
-                    <h3 class="card__title">
-                        Vestido color Hueso.
-                    </h3>
-                    <p class="card__subtitle">
-                        Elegante y todo terreno!
-                    </p>
-                </header>
-                <figure class="card__body">
-                    <img src="https://images.unsplash.com/photo-1594633313593-bab3825d0caf?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="Product Image" class="card__img" height="200" width="200">
-                    <div class="card__price">
-                        <p><span>$</span> 6500</p>
-                    </div>
-                </figure>
-                <footer class="card__footer">
-                    <hr>
-                    <nav class="card__btn-container">
-                        <a class="btn btn-primary" href="#">
-                            Detalle
-                        </a>
-                        <a class="btn btn-secondary" href="#">Comprar!</a>
-                    </nav>
-                </footer>
-                </div>
-            </article>
-
-             <article class="card">
-                <header class="card__header">
-
-                    <h3 class="card__title">
-                        Buzo Hombre Samuray.
-                    </h3>
-                    <p class="card__subtitle">
-                        Siente el poder ancestral del bushido!
-                    </p>
-                </header>
-                <figure class="card__body">
-                    <img src="https://images.unsplash.com/photo-1613338761569-735c3fc68699?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=346&q=80" alt="Product Image" class="card__img" height="200" width="200">
-                    <div class="card__price">
-                        <p><span>$</span> 5500</p>
-                    </div>
-                </figure>
-                <footer class="card__footer">
-                    <hr>
-                    <nav class="card__btn-container">
-                        <a class="btn btn-primary" href="#">
-                            Detalle
-                        </a>
-                        <a class="btn btn-secondary" href="#">Comprar!</a>
-                    </nav>
-                </footer>
-                </div>
-            </article>
-
-             <article class="card">
-                <header class="card__header">
-
-                    <h3 class="card__title">
-                        Campera Jean Celeste unidex.
-                    </h3>
-                    <p class="card__subtitle">
-                        Los clasicos nunca mueren!
-                    </p>
-                </header>
-                <figure class="card__body">
-                    <img src="https://images.unsplash.com/photo-1600574691453-499962cc0611?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80g" alt="Product Image" class="card__img" height="200" width="200">
-                    <div class="card__price">
-                        <p><span>$</span> 2500</p>
-                    </div>
-                </figure>
-                <footer class="card__footer">
-                    <hr>
-                    <nav class="card__btn-container">
-                        <a class="btn btn-primary" href="#">
-                            Detalle
-                        </a>
-                        <a class="btn btn-secondary" href="#">Comprar!</a>
-                    </nav>
-                </footer>
-                </div>
-            </article>
-
-             <article class="card">
-                <header class="card__header">
-
-                    <h3 class="card__title">
-                        Camisa cuadrille Hombre.
-                    </h3>
-                    <p class="card__subtitle">
-                        Vistete como el jefe, se el Jefe!
-                    </p>
-                </header>
-                <figure class="card__body">
-                    <img src="https://images.unsplash.com/flagged/photo-1571367034861-e6729ad9c2d5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="Product Image" class="card__img" height="200" width="200">
-                    <div class="card__price">
-                        <p><span>$</span> 5200</p>
-                    </div>
-                </figure>
-                <footer class="card__footer">
-                    <hr>
-                    <nav class="card__btn-container">
-                        <a class="btn btn-primary" href="#">
-                            Detalle
-                        </a>
-                        <a class="btn btn-secondary" href="#">Comprar!</a>
-                    </nav>
-                </footer>
-                </div>
-            </article>
-
-
+        <p id="productos-encontrados"></p>
+        <section class="section-cards" id="lista-productos">
         </section>
     </main>
 
@@ -342,6 +130,9 @@
         </div>
     </footer>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!-- sweetAlert-->
+    <script src="js/navbar.js"></script>
+    <script src="js/productos.js"></script>
 </body>
 
 </html>

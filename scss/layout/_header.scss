@@ -84,6 +84,7 @@
   &__user-menu {
     display: flex;
     align-items: center;
+    
 
     &-cart {
       font-size: 2rem;
@@ -92,6 +93,15 @@
 
       i: {
       }
+    }
+
+    &-logout {
+      margin: 0.5rem;
+      color: $color-2;
+      font-size: 1rem;
+      display: block;
+      background-color: $color-1;
+      border: none;
     }
   }
 

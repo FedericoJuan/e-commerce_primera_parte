@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>    <meta charset="UTF-8">
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Ecommerce</title>
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/main.css">
-    <title>Registrarse</title>
 </head>
+
 <body>
     <nav class="navbar">
         <input type="checkbox" id="menu-toggle">
@@ -43,7 +46,7 @@
             <a href="/pages/register/register.html" class="nav__user-contaier">Registro</a>
         </nav>
         <nav class="navbar__user-menu" id="contenedor-autenticacion-usuario">
-            <a class="navbar__user-menu-cart" href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a class="navbar__user-menu-cart" href="/pages/ordenes/ordenes.html"><i class="fa-solid fa-cart-shopping"></i></a>
             <a class="navbar__user-container" href="#">
                 <figure class="navbar__user-container.icon">
                     <i class="fa-solid fa-user"></i>
@@ -54,36 +57,30 @@
             <button onclick="logout()">Logout</button>
         </nav>
     </nav>
+    <header>
+        <h1 class="home-title">Carrito de Compras</h1>
+    </header>
+    <!-- TODO: Implementar carousel en 2do módulo -->
     <main>
-        <header class="header">
-            <h1 class="header__title">Registrarse</h1>
-        </header>
-        <form class="register" id="formulario-registro" onsubmit="agregarUsuario(event)">
-            <div class="register__item-form">
-                <label>nombre de usuario</label>
-                <input type="text" name="nombre">
-            </div>
 
-            <div class="register__item-form">
-                <label>email</label>
-                <input type="email" name="email">
-            </div>
+        
+        <section id="lista-productos-carrito">
+            <header>
+                <h2>Tus productos</h2>
+                <p>Todos los productos estan listo para la compra</p>
+            </header>
+            <ul id="lista-ordenes"></ul>
+            <h3>Total $<span id="total-orden">1000</span></h3>
+        </section>
 
-            <div class="register__item-form">
-                <label>password</label>
-                <input type="password" name="password">
-            </div>
-
-            <div class="register__item-form">
-                <label>confirmar password</label>
-                <input type="password" name="password2">
-            </div>
-
-            <button class="register__submit" type="submit">Registrarse!</button>
-        </form>
 
     </main>
 
+    <aside class="fab">
+        <a href="#" class="fab__link">
+            <i class="fab__text fa-brands fa-whatsapp"></i>
+        </a>
+    </aside>
     <footer class="footer">
         <header class="footer__institucional-header">
             <img src="/assets/images/logo.png" alt="Company Logo" class="footer__institucional-header-logo" height="50" width="50">
@@ -137,8 +134,8 @@
         </div>
     </footer>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> <!-- sweetAlert-->
     <script src="/js/navbar.js"></script>
-    <script src="/js/registro.js"></script>
+    <script src="/js/orden.js"></script>
 </body>
+
 </html>

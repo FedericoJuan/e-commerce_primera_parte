@@ -10,11 +10,15 @@
 
 @import "components/buttons";
 
+@import "components/floating_action_button";
+
+@import "components/table";
+
+@import "components/formulario";
+
 @import "layout/header";
 
 @import "layout/footer";
-
-@import "components/floating_action_button";
 
 @import "pages/home";
 
@@ -23,4 +27,6 @@
 @import "pages/about-us";
 
 @import "pages/register";
+
+
 
