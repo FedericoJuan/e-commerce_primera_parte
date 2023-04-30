@@ -9,6 +9,7 @@ function mostrarOrdenes() {
         listaOrdenes.innerHTML = `<li>No hay ordenes</li>`;
     }else {
         ordenes.forEach(orden => {
+           console.table(orden)
             listaOrdenes.innerHTML += `
             <li>
             <article>
@@ -17,7 +18,7 @@ function mostrarOrdenes() {
                 <p>${orden.descripcion}</p>
                 <p>Precio: $${orden.precio}</p>
                 <p>Cantidad: ${orden.cantidad}</p>
-                <p>Subtotal: $${orden.subproducto}</p>
+                <p>Subtotal: $${orden.subtotal}</p>
                 <button onclick="eliminarOrden('${orden.producto}')">Eliminar</button>
             </article>
         </li>
